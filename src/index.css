@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* ==========================================
+   FRUTIGER AERO / WINDOWS 7 THEME
+   ========================================== */
+
+:root {
+  --aero-blue: #4a90d9;
+  --aero-light-blue: #6bb9f0;
+  --aero-dark-blue: #1e3a5f;
+  --aero-glass: rgba(255, 255, 255, 0.15);
+  --aero-glass-border: rgba(255, 255, 255, 0.4);
+  --aero-shadow: rgba(0, 0, 0, 0.4);
+}
+
+* {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ==========================================
+   FRUTIGER AERO WALLPAPER - ROLLING HILLS
+   ========================================== */
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: 
+    /* Sun/light source with glow */
+    radial-gradient(ellipse 50% 35% at 80% 20%, rgba(255, 255, 240, 0.95) 0%, rgba(255, 245, 200, 0.7) 15%, rgba(255, 220, 150, 0.4) 30%, transparent 55%),
+    /* Sky gradient - bright and optimistic */
+    linear-gradient(180deg, 
+      #0077cc 0%,
+      #1e90ff 10%,
+      #4db8ff 25%,
+      #7ecbff 40%,
+      #a8dcff 55%,
+      #c8ebff 70%,
+      #e6f5ff 85%,
+      #f0f9ff 100%
+    );
+  background-attachment: fixed;
+  color: white;
+  position: relative;
+}
+
+/* Wavy rolling hills container */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    /* Fluffy clouds - scattered across sky */
+    radial-gradient(ellipse 220px 90px at 10% 12%, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 25%, transparent 65%),
+    radial-gradient(ellipse 180px 70px at 12% 15%, rgba(255,255,255,1) 0%, rgba(255,255,255,0.6) 35%, transparent 65%),
+    radial-gradient(ellipse 160px 65px at 30% 8%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.5) 30%, transparent 65%),
+    radial-gradient(ellipse 200px 80px at 50% 18%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.5) 30%, transparent 60%),
+    radial-gradient(ellipse 140px 55px at 52% 22%, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.6) 40%, transparent 70%),
+    radial-gradient(ellipse 190px 75px at 75% 6%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.55) 28%, transparent 60%),
+    radial-gradient(ellipse 170px 68px at 73% 10%, rgba(255,255,255,1) 0%, rgba(255,255,255,0.6) 35%, transparent 65%),
+    radial-gradient(ellipse 130px 50px at 92% 14%, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 40%, transparent 65%),
+    /* Water droplets / bubbles - Frutiger Aero style */
+    radial-gradient(circle 10px at 5% 45%, rgba(255,255,255,0.6) 0%, rgba(200,235,255,0.4) 35%, transparent 60%),
+    radial-gradient(circle 14px at 15% 52%, rgba(255,255,255,0.5) 0%, rgba(200,235,255,0.3) 40%, transparent 65%),
+    radial-gradient(circle 8px at 25% 48%, rgba(255,255,255,0.55) 0%, rgba(200,235,255,0.35) 35%, transparent 55%),
+    radial-gradient(circle 12px at 60% 44%, rgba(255,255,255,0.45) 0%, rgba(200,235,255,0.25) 45%, transparent 65%),
+    radial-gradient(circle 16px at 80% 50%, rgba(255,255,255,0.4) 0%, rgba(200,235,255,0.2) 50%, transparent 70%),
+    radial-gradient(circle 9px at 95% 46%, rgba(255,255,255,0.5) 0%, rgba(200,235,255,0.3) 40%, transparent 60%);
+}
+
+/* Rolling wavy hills using SVG data URI */
+body::after {
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 65%;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 800' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='hill1' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%234a9f4a'/%3E%3Cstop offset='40%25' style='stop-color:%233d8a3d'/%3E%3Cstop offset='100%25' style='stop-color:%232d6a2d'/%3E%3C/linearGradient%3E%3ClinearGradient id='hill2' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%235cb85c'/%3E%3Cstop offset='50%25' style='stop-color:%234a9f4a'/%3E%3Cstop offset='100%25' style='stop-color:%233d8a3d'/%3E%3C/linearGradient%3E%3ClinearGradient id='hill3' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2372c472'/%3E%3Cstop offset='30%25' style='stop-color:%235cb85c'/%3E%3Cstop offset='100%25' style='stop-color:%234a9f4a'/%3E%3C/linearGradient%3E%3ClinearGradient id='hill4' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2388d488'/%3E%3Cstop offset='20%25' style='stop-color:%2372c472'/%3E%3Cstop offset='70%25' style='stop-color:%235cb85c'/%3E%3Cstop offset='100%25' style='stop-color:%234da34d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M-100,800 L-100,500 Q200,350 500,420 T900,380 T1300,450 T1700,400 T2020,480 L2020,800 Z' fill='url(%23hill1)'/%3E%3Cpath d='M-100,800 L-100,520 Q150,420 400,480 T800,440 T1150,500 T1500,460 T1850,510 T2020,470 L2020,800 Z' fill='url(%23hill2)'/%3E%3Cpath d='M-100,800 L-100,550 Q250,480 550,530 T950,500 T1350,550 T1700,520 T2020,560 L2020,800 Z' fill='url(%23hill3)'/%3E%3Cpath d='M-100,800 L-100,600 Q100,550 350,590 T700,560 T1050,600 T1400,570 T1750,610 T2020,580 L2020,800 Z' fill='url(%23hill4)'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+/* ==========================================
+   AERO GLASS UTILITIES
+   ========================================== */
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Windows 7 Aero Glass Effect */
+  .aero-glass {
+    background: linear-gradient(180deg, 
+      rgba(255, 255, 255, 0.35) 0%, 
+      rgba(255, 255, 255, 0.15) 40%,
+      rgba(200, 220, 255, 0.2) 100%
+    );
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(150, 180, 220, 0.4);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5),
+      inset 0 -1px 0 rgba(100, 140, 200, 0.2),
+      0 0 0 1px rgba(0, 50, 100, 0.15);
+  }
+
+  /* Windows 7 Window Frame */
+  .aero-window {
+    background: linear-gradient(180deg, 
+      rgba(200, 225, 255, 0.4) 0%, 
+      rgba(180, 210, 255, 0.25) 3%,
+      rgba(150, 190, 240, 0.2) 50%,
+      rgba(140, 180, 230, 0.25) 100%
+    );
+    backdrop-filter: blur(25px) saturate(200%);
+    -webkit-backdrop-filter: blur(25px) saturate(200%);
+    border: 1px solid rgba(100, 150, 220, 0.5);
+    border-top: 1px solid rgba(180, 210, 255, 0.8);
+    box-shadow: 
+      0 12px 48px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(0, 50, 120, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6),
+      inset 0 -1px 0 rgba(80, 120, 180, 0.3);
+  }
+
+  /* Title Bar Style */
+  .aero-titlebar {
+    background: linear-gradient(180deg, 
+      rgba(200, 225, 255, 0.5) 0%, 
+      rgba(150, 190, 240, 0.4) 50%,
+      rgba(130, 170, 220, 0.5) 100%
+    );
+    border-bottom: 1px solid rgba(100, 150, 200, 0.4);
+  }
+
+  /* Glossy Button - Windows 7 Style */
+  .aero-button {
+    background: linear-gradient(180deg, 
+      rgba(255, 255, 255, 0.4) 0%, 
+      rgba(255, 255, 255, 0.2) 45%,
+      rgba(200, 220, 240, 0.15) 55%,
+      rgba(180, 200, 230, 0.25) 100%
+    );
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(120, 160, 210, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 
+      0 2px 8px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5),
+      inset 0 -1px 0 rgba(100, 140, 200, 0.2);
+    transition: all 0.15s ease;
+  }
+
+  .aero-button:hover {
+    background: linear-gradient(180deg, 
+      rgba(255, 255, 255, 0.55) 0%, 
+      rgba(255, 255, 255, 0.35) 45%,
+      rgba(210, 230, 255, 0.3) 55%,
+      rgba(190, 215, 245, 0.4) 100%
+    );
+    border-color: rgba(100, 150, 220, 0.7);
+    box-shadow: 
+      0 4px 12px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  }
+
+  .aero-button:active {
+    background: linear-gradient(180deg, 
+      rgba(180, 200, 230, 0.4) 0%, 
+      rgba(200, 220, 240, 0.3) 50%,
+      rgba(220, 235, 255, 0.25) 100%
+    );
+    box-shadow: 
+      inset 0 2px 4px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(100, 140, 200, 0.3);
+  }
+
+  /* Ensure buttons are always interactive */
+  button {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Green Action Button */
+  .aero-button-green {
+    background: linear-gradient(180deg, 
+      #8fd468 0%, 
+      #6bc144 30%,
+      #5ab436 50%,
+      #4da32d 100%
+    );
+    border: 1px solid #3d8a24;
+    border-top: 1px solid #a5e47d;
+    box-shadow: 
+      0 2px 8px rgba(0, 0, 0, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4),
+      inset 0 -1px 0 rgba(0, 80, 0, 0.2);
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 60, 0, 0.5);
+  }
+
+  .aero-button-green:hover {
+    background: linear-gradient(180deg, 
+      #9fe478 0%, 
+      #7cd154 30%,
+      #6ac446 50%,
+      #5db33d 100%
+    );
+  }
+
+  /* Blue Action Button */
+  .aero-button-blue {
+    background: linear-gradient(180deg, 
+      #6bb9f0 0%, 
+      #4a9fe0 30%,
+      #3d8fd4 50%,
+      #2d7fc4 100%
+    );
+    border: 1px solid #1e5a9e;
+    border-top: 1px solid #8ed0ff;
+    box-shadow: 
+      0 2px 8px rgba(0, 0, 0, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4),
+      inset 0 -1px 0 rgba(0, 40, 100, 0.3);
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 40, 80, 0.5);
+  }
+
+  .aero-button-blue:hover {
+    background: linear-gradient(180deg, 
+      #7bc9ff 0%, 
+      #5aafee 30%,
+      #4d9fe4 50%,
+      #3d8fd4 100%
+    );
+  }
+
+  /* Red Button */
+  .aero-button-red {
+    background: linear-gradient(180deg, 
+      #ff7b7b 0%, 
+      #e05555 30%,
+      #d44545 50%,
+      #c43535 100%
+    );
+    border: 1px solid #9e2020;
+    border-top: 1px solid #ff9d9d;
+    box-shadow: 
+      0 2px 8px rgba(0, 0, 0, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    color: white;
+    text-shadow: 0 1px 2px rgba(80, 0, 0, 0.5);
+  }
+
+  /* Input Fields */
+  .aero-input {
+    background: linear-gradient(180deg, 
+      rgba(255, 255, 255, 0.95) 0%, 
+      rgba(255, 255, 255, 0.85) 100%
+    );
+    border: 1px solid rgba(100, 140, 190, 0.6);
+    box-shadow: 
+      inset 0 1px 3px rgba(0, 0, 0, 0.15),
+      0 1px 0 rgba(255, 255, 255, 0.5);
+    color: #1a1a2e;
+  }
+
+  .aero-input:focus {
+    border-color: #4a90d9;
+    box-shadow: 
+      inset 0 1px 3px rgba(0, 0, 0, 0.1),
+      0 0 0 3px rgba(74, 144, 217, 0.3);
+    outline: none;
+  }
+
+  /* Progress Bar Skeuomorphic */
+  .aero-progress {
+    background: linear-gradient(180deg, 
+      rgba(200, 210, 220, 0.6) 0%, 
+      rgba(180, 195, 215, 0.4) 50%,
+      rgba(190, 205, 220, 0.5) 100%
+    );
+    border: 1px solid rgba(100, 130, 170, 0.5);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+  }
+
+  .aero-progress-bar {
+    background: linear-gradient(180deg, 
+      #8fd468 0%, 
+      #6bc144 30%,
+      #5ab436 70%,
+      #4da32d 100%
+    );
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  /* Card styling */
+  .aero-card {
+    background: linear-gradient(180deg, 
+      rgba(255, 255, 255, 0.3) 0%, 
+      rgba(255, 255, 255, 0.15) 30%,
+      rgba(200, 220, 250, 0.2) 100%
+    );
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 
+      0 6px 24px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  /* Text Shadows */
+  .text-shadow {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .text-shadow-light {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* ==========================================
+   WINDOWS 7 SCROLLBAR
+   ========================================== */
+::-webkit-scrollbar {
+  width: 17px;
+  height: 17px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, 
+    rgba(220, 230, 245, 0.7) 0%, 
+    rgba(200, 215, 235, 0.6) 50%,
+    rgba(210, 225, 240, 0.7) 100%
+  );
+  border-left: 1px solid rgba(150, 175, 210, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, 
+    rgba(180, 200, 230, 0.9) 0%, 
+    rgba(160, 185, 220, 0.8) 50%,
+    rgba(170, 195, 225, 0.85) 100%
+  );
+  border: 1px solid rgba(130, 160, 200, 0.6);
+  border-radius: 2px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, 
+    rgba(200, 220, 250, 0.95) 0%, 
+    rgba(180, 205, 240, 0.9) 50%,
+    rgba(190, 215, 245, 0.92) 100%
+  );
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(74, 144, 217, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(74, 144, 217, 0.8);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
